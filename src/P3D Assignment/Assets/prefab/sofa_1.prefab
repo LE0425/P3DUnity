@@ -341,6 +341,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 266998054355757830}
+  - component: {fileID: -4787237458721634507}
   m_Layer: 0
   m_Name: sofa_1
   m_TagString: Untagged
@@ -358,7 +359,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
   m_LocalPosition: {x: 115.09, y: -2.364314, z: 44.31}
-  m_LocalScale: {x: 6.19, y: 6.19, z: 6.19}
+  m_LocalScale: {x: 9.28, y: 9.28, z: 9.28}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2367509965939247747}
@@ -369,6 +370,27 @@ Transform:
   - {fileID: 1988327464123848722}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 90}
+--- !u!65 &-4787237458721634507
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4816983123293685769}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5102716569193299504
 GameObject:
   m_ObjectHideFlags: 0
