@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class InputManager : MonoBehaviour
-//用于检测鼠标点击平面的位置
+//用于确定鼠标点击平面所在位置
 {
     [SerializeField]
     //SerializeField?
@@ -19,8 +19,8 @@ public class InputManager : MonoBehaviour
     public Vector3 GetSelectedMapPosition(){
         Vector3 mousePos=Input.mousePosition;
         //输入鼠标三维坐标给mousePos
-        mousePos.Z=sceneCamera.nearClipPlane;//报错，Vector3没有Z?
-        //将鼠标的z值赋给sceneCamera，防止我们选择到没有被camera渲染到的物体？
+        mousePos.z=sceneCamera.nearClipPlane;//Vector3.z中z要小写
+        //将鼠标的z值赋给sceneCamera，防止我们选择到没有被camera渲染到的物体??？
         Ray ray=sceneCamera.ScreenPointToRay(mousePos);
         //ray一条由原点射向某个距离的射线
         //screenPointToRay相机到屏幕上一点的射线
@@ -28,11 +28,11 @@ public class InputManager : MonoBehaviour
         RaycastHit hit;
         //hit就是得到的射线结果,一个数组
     //ray是一条射线，hit是代表这条射线的数组
-        if(Physics.Raycast(ray,out hit,100,placementLayermask))
+        if(Physics.Raycast(ray,out hit,80,placementLayermask))
         //Raycast(Vector3 origin, Vector3 direction, float maxDistance, int layerMask)
         //origin 射线的原点在世界坐标中的位置
         //direction射线方向,out hit将数组传递出去
-        //maxDistance 射线应该检测碰撞的最大距离?
+        //maxDistance 射线应该检测碰撞的最大距离（怎么确定数值???）
         //layerMask选中的图层
         //返回bool值，如果和选中的图层发生碰撞,返回true
         {
