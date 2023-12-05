@@ -28,7 +28,7 @@ public class InputManager : MonoBehaviour
         RaycastHit hit;
         //hit就是得到的射线结果,一个数组
     //ray是一条射线，hit是代表这条射线的数组
-        if(Physics.Raycast(ray,out hit,80,placementLayermask))
+        if(Physics.Raycast(ray,out hit,100,placementLayermask))
         //Raycast(Vector3 origin, Vector3 direction, float maxDistance, int layerMask)
         //origin 射线的原点在世界坐标中的位置
         //direction射线方向,out hit将数组传递出去
